@@ -12,6 +12,7 @@ const loginLimiter = rateLimit({
   max: 100, // limit each IP to 100 login requests per windowMs
 });
 
+// Environment variables
 const {
   DS_AUTH_SERVER = "https://account-d.docusign.com",
   DS_CLIENT_ID,
@@ -23,8 +24,10 @@ const {
   PORT = 4000,
 } = process.env;
 
+// In-memory storage for access token (for demo purposes only - do not use in production)
 let accessToken = null;
 
+// Construct the  OAuth authorization URL
 function buildAuthUrl() {
   const params = new URLSearchParams({
     response_type: "code",
@@ -35,15 +38,17 @@ function buildAuthUrl() {
   return `${DS_AUTH_SERVER}/oauth/auth?${params.toString()}`;
 }
 
+// Create an authenticated IAM client
 function makeIamClient(token) {
   return new iam.IamClient({ accessToken: token });
 }
 
+// Homepage route for server start
 app.get("/", (req, res) => {
   const authed = Boolean(accessToken);
 
   res.type("html").send(`
-    <h2>Contract Automation</h2>
+    <h2>Contract Task Automation</h2>
 
     <p><strong>Status:</strong> ${authed ? "Authenticated" : "Not authenticated"}</p>
 
@@ -62,15 +67,18 @@ app.get("/", (req, res) => {
   `);
 });
 
+// OAuth login route
 app.get("/login", loginLimiter, (req, res) => {
   res.redirect(buildAuthUrl());
 });
 
+// Logout route to clear the access token
 app.get("/logout", (req, res) => {
   accessToken = null;
   res.redirect("/");
 });
 
+// OAuth callback route to handle the authorization code and exchange it for an access token
 app.get("/callback", async (req, res) => {
   const code = req.query.code;
   if (!code) return res.status(400).send("Missing ?code=");
@@ -99,6 +107,7 @@ app.get("/callback", async (req, res) => {
   }
 });
 
+// Helper function to build trigger_inputs based on the trigger schema returned by the SDK
 function buildTriggerInputsFromSchema(schema) {
   const today = new Date().toISOString().split("T")[0];
 
@@ -135,6 +144,7 @@ function buildTriggerInputsFromSchema(schema) {
   return inputs;
 }
 
+// Route to trigger the Maestro workflow via the trigger URL obtained from the SDK
 app.post("/trigger", async (req, res) => {
   if (!accessToken) return res.redirect("/login");
 
@@ -161,7 +171,8 @@ app.post("/trigger", async (req, res) => {
       triggerReq?.rawValue?.triggerInputSchema ||
       [];
 
-    if (!triggerUrl) {
+    // Error handling for missing URL or schema in the SDK response
+      if (!triggerUrl) {
       return res.type("html").send(`
         <h3>Missing trigger URL</h3>
         <details><summary>Raw trigger requirements</summary>
@@ -183,7 +194,7 @@ app.post("/trigger", async (req, res) => {
     // 2) Build trigger_inputs from schema
     const triggerInputs = buildTriggerInputsFromSchema(schema);
 
-    // 3) POST to trigger URL
+    // 3) POST request to trigger workflow
     const body = {
       instance_name: "Web Forms Test",
       trigger_inputs: triggerInputs,
@@ -200,6 +211,7 @@ app.post("/trigger", async (req, res) => {
 
     const triggerResp = await resp.json().catch(() => ({}));
 
+    // Error handling for trigger request failure
     if (!resp.ok) {
       return res.type("html").send(`
         <h3>Trigger failed</h3>
@@ -212,8 +224,10 @@ app.post("/trigger", async (req, res) => {
       `);
     }
 
+    // Pull instance URL from response
     const instanceUrl = triggerResp?.instance_url;
 
+    // Success page with link to Maestro instance and details for debugging
     res.type("html").send(`
       <h3>Triggered</h3>
       ${
@@ -237,6 +251,7 @@ app.post("/trigger", async (req, res) => {
   }
 });
 
+// Helper function to escape HTML for display in error messages and debugging details
 function escapeHtml(str) {
   return str
     .replaceAll("&", "&amp;")
@@ -246,6 +261,7 @@ function escapeHtml(str) {
     .replaceAll("'", "&#039;");
 }
 
+// Start the server
 app.listen(Number(PORT), () => {
   console.log(`Listening on http://localhost:${PORT}`);
 });
