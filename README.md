@@ -10,13 +10,13 @@
 6. Prints the `instance_url`
 
 ## Prerequisites
-- Docusign developer account (signup link: https://developers.docusign.com/)
-- Node.js and npm
+- [(Docusign developer account)](https://www.docusign.com/developers/sandbox?postActivateUrl=https%3A%2F%2Fdevelopers.docusign.com%2F)
+- [Node.js and npm](https://nodejs.org/en/download/)
 
-Additionally, a Maestro workflow in your account that is:
-- Published
+Additionally, a Maestro workflow in your account that:
+- Is published
 - Uses the **From an API call** start method
-- Define trigger inputs (e.g. startDate, workflowBuilder, etc.)
+- Defines trigger inputs (e.g. startDate, workflowBuilder, etc.)
 
 ## Installation Steps
 
