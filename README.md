@@ -27,7 +27,7 @@ cd server
 npm install 
 ```
 
-2️. Configure environment variables
+2. Configure environment variables
 
 Copy `example.env` to `/server/.env.`
 
@@ -35,15 +35,14 @@ Copy `example.env` to `/server/.env.`
 
 and set these values:
 
-DS_CLIENT_ID=YOUR_INTEGRATION_KEY
-DS_CLIENT_SECRET=YOUR_SECRET
-DS_ACCOUNT_ID=YOUR_ACCOUNT_ID
-MAESTRO_WORKFLOW_ID=YOUR_WORKFLOW_ID
-
-DEVELOPER_NAME=Your Name
-DEVELOPER_EMAIL=your@email.com
-WORKFLOW_BUILDER_EMAIL=your@email.com
-WORKFLOW_PREPARER_EMAIL=your@email.com
+- DS_CLIENT_ID=YOUR_INTEGRATION_KEY
+- DS_CLIENT_SECRET=YOUR_SECRET
+- DS_ACCOUNT_ID=YOUR_ACCOUNT_ID
+- MAESTRO_WORKFLOW_ID=YOUR_WORKFLOW_ID
+- DEVELOPER_NAME=Your Name
+- DEVELOPER_EMAIL=your@email.com
+- WORKFLOW_BUILDER_EMAIL=your@email.com
+- WORKFLOW_PREPARER_EMAIL=your@email.com
 
 3️. Start the server
 ```bash
