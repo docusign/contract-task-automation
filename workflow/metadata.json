@@ -1,0 +1,43 @@
+{
+    "packageId": "ab417d5e-0601-49e2-8258-2765c13e0f0f",
+    "name": "Admin Automation",
+    "createdDate": "2026-02-12T05:01:57.566Z",
+    "updatedDate": "2026-02-12T05:01:57.566Z",
+    "version": "1.0.0",
+    "packageType": "Package",
+    "accountId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "owner": {
+        "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "userName": "xxxx xxx xxxxxxx"
+    },
+    "components": [
+        {
+            "componentId": "bab587c5-ab2a-44d0-90a6-d9e3b1964b3a",
+            "name": "Collect kickoff details",
+            "componentType": "WebForm",
+            "relativePath": "webform/bab587c5-ab2a-44d0-90a6-d9e3b1964b3a.json",
+            "dependentResources": []
+        },
+        {
+            "componentId": "80ac81e9-b68d-418d-9ba7-1fceba75a325",
+            "name": "freelance",
+            "relativePath": "maestroworkflow/80ac81e9-b68d-418d-9ba7-1fceba75a325/workflow-definition.json",
+            "componentType": "MaestroWorkflow",
+            "dependentResources": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        }
+    ],
+    "status": "Active",
+    "publisher": {
+        "name": "Docusign",
+        "email": "support@docusign.com",
+        "phone": "800-888-5555",
+        "website": "https://www.docusign.com",
+        "authorId": "xxxxxxxx",
+        "authorName": "xxxxxxx"
+    },
+    "additionalProperties": {
+        "workflowState": "Published"
+    }
+}
