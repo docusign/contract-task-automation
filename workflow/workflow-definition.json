@@ -1,0 +1,1413 @@
+{
+    "workflowName": "freelance",
+    "workflowDescription": "",
+    "accountId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "documentVersion": "1.0.0",
+    "schemaVersion": "3.0.0",
+    "participants": {
+        "e62a8e09-137a-49ea-9301-d56bbc170d61": {
+            "participantRole": "client",
+            "participantId": "e62a8e09-137a-49ea-9301-d56bbc170d61",
+            "participantInfo": {}
+        },
+        "233d733e-545d-4755-832b-928a6dc72179": {
+            "participantId": "233d733e-545d-4755-832b-928a6dc72179",
+            "participantRole": "User who last published this workflow",
+            "participantInfo": {},
+            "participantType": "WorkflowBuilder"
+        },
+        "5f1b8e7b-a6b8-4ba7-bfa2-c66b51be45f4": {
+            "participantId": "5f1b8e7b-a6b8-4ba7-bfa2-c66b51be45f4",
+            "participantRole": "User who starts this workflow",
+            "participantInfo": {},
+            "participantType": "WorkflowPreparer"
+        },
+        "e09b155e-38ed-47d1-93d3-280b1c05ca9f": {
+            "participantRole": "developer",
+            "participantId": "e09b155e-38ed-47d1-93d3-280b1c05ca9f",
+            "participantInfo": {}
+        }
+    },
+    "trigger": {
+        "name": "Get_URL",
+        "id": "c30c7afc-7d56-451c-b889-0a6488822fca",
+        "input": {
+            "metadata": {
+                "customAttributes": {}
+            },
+            "payload": {
+                "id_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "id"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "String"
+                },
+                "dacId_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "dacId"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "String",
+                    "displayName": "Instance ID"
+                },
+                "startDate_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "startDate"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "Date",
+                    "displayName": "Start Date and Time"
+                },
+                "workflowBuilder_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "workflowBuilder"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "User",
+                    "displayName": "This workflow’s creator"
+                },
+                "workflowPreparer_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "workflowPreparer"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "User",
+                    "displayName": "User who starts this workflow"
+                },
+                "developerName_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "developerName"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "String"
+                },
+                "developerEmail_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                    "source": "step",
+                    "path": [
+                        "developerEmail"
+                    ],
+                    "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                    "type": "String"
+                }
+            },
+            "participants": {}
+        },
+        "output": {
+            "id_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "id"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "String"
+            },
+            "dacId_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "dacId"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "String",
+                "displayName": "Instance ID"
+            },
+            "startDate_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "startDate"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "Date",
+                "displayName": "Start Date and Time"
+            },
+            "workflowBuilder_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "workflowBuilder"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "User",
+                "displayName": "This workflow’s creator"
+            },
+            "workflowPreparer_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "workflowPreparer"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "User",
+                "displayName": "User who starts this workflow"
+            },
+            "developerName_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "developerName"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "String"
+            },
+            "developerEmail_c30c7afc-7d56-451c-b889-0a6488822fca": {
+                "source": "step",
+                "path": [
+                    "developerEmail"
+                ],
+                "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                "type": "String"
+            }
+        },
+        "type": "API",
+        "httpType": "Get"
+    },
+    "variables": {
+        "id_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "id"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "String"
+        },
+        "dacId_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "dacId"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "String",
+            "displayName": "Instance ID"
+        },
+        "startDate_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "startDate"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "Date",
+            "displayName": "Start Date and Time"
+        },
+        "workflowBuilder_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "workflowBuilder"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "User",
+            "displayName": "This workflow's creator"
+        },
+        "workflowPreparer_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "workflowPreparer"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "User",
+            "displayName": "User who starts this workflow"
+        },
+        "developerName_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "developerName"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "String"
+        },
+        "developerEmail_c30c7afc-7d56-451c-b889-0a6488822fca": {
+            "source": "step",
+            "path": [
+                "developerEmail"
+            ],
+            "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+            "type": "String"
+        },
+        "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "clientName.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Client name"
+        },
+        "clientEmail.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "clientEmail.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Client email"
+        },
+        "agreementName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "agreementName.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Agreement name"
+        },
+        "agreementId.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "agreementId.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Agreement ID"
+        },
+        "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "projectName.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Project Name"
+        },
+        "packageName_selected.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "packageName_selected.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "Enum",
+            "displayName": "Package Name (API value)",
+            "enumOptions": [
+                "Starter",
+                "Standard",
+                "Premium"
+            ]
+        },
+        "packageName_selected.label_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "packageName_selected.label",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "Enum",
+            "displayName": "Package Name (Option text)",
+            "enumOptions": [
+                "Starter",
+                "Standard",
+                "Premium"
+            ]
+        },
+        "packageName_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "packageName",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "Dropdown",
+            "displayName": "Package Name",
+            "enumOptions": ["Starter", "Standard", "Premium"]
+        },
+        "price.normalized_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "price.normalized",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "Float",
+            "displayName": "Price (Normalized)"
+        },
+        "price.userValue_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "price.userValue",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Price (User Value)"
+        },
+        "calendlyUrl.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "calendlyUrl.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Kickoff/Scheduling Link (Calendly)"
+        },
+        "repoName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "repoName.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Repo name"
+        },
+        "intakeNotes.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "intakeNotes.value",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "String",
+            "displayName": "Anything else we should know?"
+        },
+        "readyToKickoff_Yes!_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "readyToKickoff_Yes!",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "Boolean",
+            "displayName": "Ready to kickoff automatically? (Yes!)"
+        },
+        "readyToKickoff_35d3827a-7c5a-4843-99bd-d441266b8478": {
+            "source": "step",
+            "propertyName": "readyToKickoff",
+            "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "type": "CheckboxGroup",
+            "displayName": "Ready to kickoff automatically?"
+        }
+    },
+    "steps": [
+        {
+            "id": "35d3827a-7c5a-4843-99bd-d441266b8478",
+            "name": "Collect Data with Web Forms",
+            "moduleName": "WebForms",
+            "configurationProgress": "Completed",
+            "type": "DS-WebForms",
+            "config": {
+                "webFormSlug": "70deb404dff81a10927ba02c57cc64c9",
+                "webFormId": "bab587c5-ab2a-44d0-90a6-d9e3b1964b3a",
+                "webFormName": "Collect kickoff details",
+                "participantId": "e62a8e09-137a-49ea-9301-d56bbc170d61"
+            },
+            "input": {},
+            "output": {
+                "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "clientName.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Client name"
+                },
+                "clientEmail.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "clientEmail.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Client email"
+                },
+                "agreementName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "agreementName.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Agreement name"
+                },
+                "agreementId.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "agreementId.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Agreement ID"
+                },
+                "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "projectName.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Project Name"
+                },
+                "packageName_selected.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "packageName_selected.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "Enum",
+                    "displayName": "Package Name (API value)",
+                    "enumOptions": [
+                        "Starter",
+                        "Standard",
+                        "Premium"
+                    ]
+                },
+                "packageName_selected.label_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "packageName_selected.label",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "Enum",
+                    "displayName": "Package Name (Option text)",
+                    "enumOptions": [
+                        "Starter",
+                        "Standard",
+                        "Premium"
+                    ]
+                },
+                "packageName_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "packageName",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "Dropdown",
+                    "displayName": "Package Name",
+                    "enumOptions": ["Starter", "Standard", "Premium"]
+                },
+                "price.normalized_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "price.normalized",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "Float",
+                    "displayName": "Price (Normalized)"
+                },
+                "price.userValue_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "price.userValue",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Price (User Value)"
+                },
+                "calendlyUrl.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "calendlyUrl.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Kickoff/Scheduling Link (Calendly)"
+                },
+                "repoName.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "repoName.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Repo name"
+                },
+                "intakeNotes.value_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "intakeNotes.value",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "String",
+                    "displayName": "Anything else we should know?"
+                },
+                "readyToKickoff_Yes!_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "readyToKickoff_Yes!",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "Boolean",
+                    "displayName": "Ready to kickoff automatically? (Yes!)"
+                },
+                "readyToKickoff_35d3827a-7c5a-4843-99bd-d441266b8478": {
+                    "source": "step",
+                    "propertyName": "readyToKickoff",
+                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                    "type": "CheckboxGroup",
+                    "displayName": "Ready to kickoff automatically?"
+                }
+            }
+        },
+        {
+            "id": "24ae9757-1554-4cfe-8ff9-74dd69aeb3d5",
+            "name": "Ready to kickoff automatically? (Yes!) = True",
+            "moduleName": "IfElse",
+            "configurationProgress": "Completed",
+            "type": "DS-IfElse",
+            "ifSteps": [
+                {
+                    "id": "ab9070ec-d17b-4ac2-ab68-c143a392ec24",
+                    "name": "Client kickoff email",
+                    "moduleName": "GenericNotification-SendEmail",
+                    "configurationProgress": "Completed",
+                    "type": "DS-CallServiceStep",
+                    "config": {
+                        "apiUrl": "https://s1.us.services.demo.docusign.net/aow-services/v1.0/services/executeSendEmailNotification",
+                        "scopes": ["aow_manage"],
+                        "useUserAuth": false
+                    },
+                    "input": {
+                        "httpType": "Post",
+                        "payload": {
+                            "templateType": "MaestroEmailConfigurator",
+                            "recipients": [
+                                {
+                                    "email": {
+                                        "source": "step",
+                                        "propertyName": "clientEmail.value",
+                                        "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                                        "type": "String",
+                                        "displayName": "Client email"
+                                    }
+                                }
+                            ],
+                            "sender_name": "Docusign Maestro",
+                            "sender_alias": "Maestro",
+                            "mergeValues": {
+                                "Subject": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Next steps for "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Project Name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Headline": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Next steps"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Subtitle": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Hi "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " ,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Your agreement is signed — we’re ready to get started on "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Project Name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Here’s what happens next:"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "1) Book your kickoff call:"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "calendlyUrl.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Kickoff/Scheduling Link (Calendly)",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "2) Before the call, reply with any assets you already have."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Project details:"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Package: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "packageName_selected.label_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Package Name (Option text)",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Repo: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "repoName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Repo name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Notes: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "intakeNotes.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Anything else we should know?",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Agreement:"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "agreementName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Agreement name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "ID: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "agreementId.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Agreement ID",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Talk soon,"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "developerName_c30c7afc-7d56-451c-b889-0a6488822fca",
+                                                        "label": null,
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "output": {}
+                },
+                {
+                    "id": "8e7ee2ea-1dc7-473b-9a79-07cfb8b44c97",
+                    "name": "Internal Notification email",
+                    "moduleName": "GenericNotification-SendEmail",
+                    "configurationProgress": "Completed",
+                    "type": "DS-CallServiceStep",
+                    "config": {
+                        "apiUrl": "https://s1.us.services.demo.docusign.net/aow-services/v1.0/services/executeSendEmailNotification",
+                        "scopes": ["aow_manage"],
+                        "useUserAuth": false
+                    },
+                    "input": {
+                        "httpType": "Post",
+                        "payload": {
+                            "templateType": "MaestroEmailConfigurator",
+                            "recipients": [
+                                {
+                                    "email": {
+                                        "source": "step",
+                                        "path": ["developerEmail"],
+                                        "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                                        "type": "String"
+                                    }
+                                }
+                            ],
+                            "sender_name": "Docusign Maestro",
+                            "sender_alias": "Maestro",
+                            "mergeValues": {
+                                "Subject": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Kickoff pack sent!"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Headline": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Kickoff automation completed for  "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Subtitle": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Client: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientEmail.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client email",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Project: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Project Name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Package: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "packageName_selected.label_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Package Name (Option text)",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Price: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "price.userValue_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Price (User Value)",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Repo: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "repoName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Repo name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Agreement: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "agreementName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Agreement name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "agreementId.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Agreement ID",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "  "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Notes:"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "intakeNotes.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Anything else we should know?",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "output": {}
+                }
+            ],
+            "elseSteps": [
+                {
+                    "id": "c5b53b74-4770-491c-a3aa-359d13f25c91",
+                    "name": "Review request email",
+                    "moduleName": "GenericNotification-SendEmail",
+                    "configurationProgress": "Completed",
+                    "type": "DS-CallServiceStep",
+                    "config": {
+                        "apiUrl": "https://s1.us.services.demo.docusign.net/aow-services/v1.0/services/executeSendEmailNotification",
+                        "scopes": ["aow_manage signature"],
+                        "useUserAuth": false
+                    },
+                    "input": {
+                        "httpType": "Post",
+                        "payload": {
+                            "templateType": "MaestroEmailConfigurator",
+                            "recipients": [
+                                {
+                                    "email": {
+                                        "source": "step",
+                                        "path": ["developerEmail"],
+                                        "stepId": "c30c7afc-7d56-451c-b889-0a6488822fca",
+                                        "type": "String"
+                                    }
+                                }
+                            ],
+                            "sender_name": "Docusign Maestro",
+                            "sender_alias": "Maestro",
+                            "mergeValues": {
+                                "Subject": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Manual review needed: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Headline": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Manual review required before kickoff."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Subtitle": {
+                                    "type": "doc",
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Client: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "clientEmail.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Client email",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "  "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Project: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Project Name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Package: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "packageName_selected.label_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Package Name (Option text)",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Price: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "price.userValue_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Price (User Value)",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Agreement: "
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "agreementName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Agreement name",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "agreementId.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Agreement ID",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": "  "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "text",
+                                                    "text": "Notes:"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph",
+                                            "content": [
+                                                {
+                                                    "type": "mention",
+                                                    "attrs": {
+                                                        "id": "intakeNotes.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                                                        "label": "Anything else we should know?",
+                                                        "mentionSuggestionChar": "@"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "text": " "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "paragraph"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "output": {}
+                }
+            ],
+            "merge": true,
+            "expression": {
+                "type": "BooleanExpression",
+                "logicalOperator": "Or",
+                "expressions": [
+                    {
+                        "type": "BooleanExpression",
+                        "logicalOperator": "And",
+                        "expressions": [
+                            {
+                                "type": "ComparisonExpression",
+                                "comparisonOperator": "Equal",
+                                "leftOperand": {
+                                    "source": "step",
+                                    "propertyName": "readyToKickoff_Yes!",
+                                    "stepId": "35d3827a-7c5a-4843-99bd-d441266b8478",
+                                    "type": "Boolean",
+                                    "displayName": "Ready to kickoff automatically? (Yes!)"
+                                },
+                                "rightOperand": true,
+                                "caseSensitive": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "3a54ee47-2ff2-4ebb-b76c-e90be632f29a",
+            "name": "Show a Confirmation Screen",
+            "moduleName": "ShowConfirmationScreen",
+            "configurationProgress": "Completed",
+            "type": "DS-ShowScreenStep",
+            "config": {
+                "participantId": "e62a8e09-137a-49ea-9301-d56bbc170d61"
+            },
+            "input": {
+                "httpType": "Post",
+                "payload": {
+                    "participantId": "e62a8e09-137a-49ea-9301-d56bbc170d61",
+                    "confirmationMessage": {
+                        "title": "Tasks complete",
+                        "description": {
+                            "type": "doc",
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "text": "You're done!"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "output": {}
+        },
+        {
+            "name": "Path End",
+            "type": "DS-End",
+            "moduleName": "End",
+            "id": "3f3555b7-e9ee-4db0-8399-8ef5fbc8663a"
+        }
+    ],
+    "instanceName": {
+        "type": "doc",
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "type": "mention",
+                        "attrs": {
+                            "id": "clientName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                            "label": "Client name",
+                            "mentionSuggestionChar": "@"
+                        }
+                    },
+                    {
+                        "type": "mention",
+                        "attrs": {
+                            "id": "projectName.value_35d3827a-7c5a-4843-99bd-d441266b8478",
+                            "label": "Project Name",
+                            "mentionSuggestionChar": "@"
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": " "
+                    },
+                    {
+                        "type": "mention",
+                        "attrs": {
+                            "id": "startDate_c30c7afc-7d56-451c-b889-0a6488822fca",
+                            "label": "Start Date and Time",
+                            "mentionSuggestionChar": "@"
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "  "
+                    }
+                ]
+            }
+        ]
+    }
+}

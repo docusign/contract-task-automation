@@ -1,0 +1,24 @@
+Subject: Next steps for /projectName
+
+Headline: Kickoff meeting and project setup
+
+Hi /clientName,
+
+Your agreement is signed and we’re ready to get started on /projectName.
+
+Here’s what happens next:
+
+1. Book your kickoff call:
+/calendlyKickoffLink
+
+2. Before the call, reply with any assets you already have.
+
+Project details:
+Package: /packageName
+Repo: /repoName
+Notes: /intakeNotes
+
+Agreement: /agreementName (/agreementId)
+
+Talk soon,
+/developerName

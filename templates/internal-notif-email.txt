@@ -1,0 +1,14 @@
+Subject: Kickoff pack sent to /clientName
+
+Headline: Kickoff automation completed.
+
+Client: /clientName (/clientEmail)
+Project: /projectName
+Package: /packageName
+Price: /price
+Repo: /repoName
+
+Agreement: /agreementName (/agreementId)
+
+Notes:
+/intakeNotes

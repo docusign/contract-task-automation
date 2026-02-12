@@ -1,0 +1,268 @@
+{
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "accountId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "isPublished": true,
+    "isEnabled": true,
+    "hasDraftChanges": false,
+    "formState": "active",
+    "formProperties": {
+        "name": "Collect kickoff details",
+        "isPrivateAccess": false,
+        "allowSending": false,
+        "unsupportedSendingReason": "standalone"
+    },
+    "formMetadata": {
+        "source": "blank",
+        "createdDateTime": "2026-02-11T22:42:17.889Z",
+        "publishedSlug": "70deb404dff81a10927ba02c57cc64c9",
+        "owner": {
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userName": "xxxx xxx xxxxxxx"
+        },
+        "lastModifiedDateTime": "2026-02-12T00:22:32.767Z",
+        "lastModifiedBy": {
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userName": "xxxx xxx xxxxxxx"
+        },
+        "publishedComponentNames": {
+            "clientName": "TextBox",
+            "clientEmail": "TextBox",
+            "agreementName": "TextBox",
+            "agreementId": "TextBox",
+            "projectName": "TextBox",
+            "packageName": "Select",
+            "price": "Number",
+            "calendlyUrl": "TextBox",
+            "repoName": "TextBox",
+            "intakeNotes": "TextBox",
+            "readyToKickoff": "CheckboxGroup"
+        },
+        "admModelNamespace": "docusign.forms._44318ffc_4c07_49da_abe0_168818bcda81._bab587c5_ab2a_44d0_90a6_d9e3b1964b3a",
+        "formContentModifiedBy": {
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userName": "xxxx xxx xxxxxxx"
+        },
+        "formContentModifiedDateTime": "2026-02-11T23:48:25.671Z",
+        "admModelVersion": "1.1.0",
+        "type": "standalone",
+        "formPropertiesModifiedBy": {
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userName": "xxxx xxx xxxxxxx"
+        },
+        "formPropertiesModifiedDateTime": "2026-02-11T23:07:42.530Z",
+        "lastPublishedBy": {
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userName": "xxxx xxx xxxxxxx"
+        },
+        "lastPublishedDateTime": "2026-02-12T00:22:32.767Z",
+        "lastEnabledBy": {
+            "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "userName": "xxxx xxx xxxxxxx"
+        },
+        "lastEnabledDateTime": "2026-02-12T00:22:32.767Z"
+    },
+    "formContent": {
+        "components": {
+            "Root_Of_Journey": {
+                "children": [
+                    "Welcome_b0s7IOor",
+                    "Step_OdNFrOJX",
+                    "Step_lDlTCB3B",
+                    "Step_9l6l0XBa",
+                    "Summary_bZU0pDRk",
+                    "FormSubmitAction_2EApKuAL",
+                    "Thankyou_sRYihUfd"
+                ],
+                "text": "",
+                "componentKey": "Root_Of_Journey",
+                "componentType": "Root",
+                "componentName": "Root_Of_Journey",
+                "componentRules": {}
+            },
+            "Welcome_b0s7IOor": {
+                "startButtonText": "Start",
+                "subText": "Add description text here.",
+                "text": "Welcome",
+                "componentKey": "Welcome_b0s7IOor",
+                "componentType": "Welcome"
+            },
+            "Step_OdNFrOJX": {
+                "text": "Client and Agreement Info",
+                "componentKey": "Step_OdNFrOJX",
+                "componentType": "Step",
+                "children": [
+                    "TextBox_uHzsUyOk",
+                    "TextBox_hPMbO1hd",
+                    "TextBox_EiLlybEZ",
+                    "TextBox_iJy0PD5a"
+                ],
+                "componentName": "Step_OdNFrOJX"
+            },
+            "Step_lDlTCB3B": {
+                "children": [
+                    "TextBox_tBtl2qEp",
+                    "Select_ga3tnJ6C",
+                    "Number_4nkbDQ9k",
+                    "TextBox_V1pF0Abg",
+                    "TextBox_bQQd0TOa",
+                    "TextBox_1_rcHmWt"
+                ],
+                "componentKey": "Step_lDlTCB3B",
+                "componentName": "Step_lDlTCB3B",
+                "componentType": "Step",
+                "text": "Project Name"
+            },
+            "Step_9l6l0XBa": {
+                "text": "Readiness check",
+                "componentKey": "Step_9l6l0XBa",
+                "componentType": "Step",
+                "children": [
+                    "CheckboxGroup_iOJyuJGv"
+                ],
+                "componentName": "Step_9l6l0XBa"
+            },
+            "Summary_bZU0pDRk": {
+                "subText": "Please review the information you have entered:",
+                "text": "Summary",
+                "componentKey": "Summary_bZU0pDRk",
+                "componentType": "Summary"
+            },
+            "FormSubmitAction_2EApKuAL": {
+                "componentKey": "FormSubmitAction_2EApKuAL",
+                "componentType": "FormSubmitAction"
+            },
+            "Thankyou_sRYihUfd": {
+                "confirmationButtonText": "Done",
+                "confirmationButtonUrl": "",
+                "showConfirmationButton": false,
+                "subText": "We've received your form.",
+                "text": "Thank you",
+                "componentKey": "Thankyou_sRYihUfd",
+                "componentType": "Thankyou"
+            },
+            "TextBox_uHzsUyOk": {
+                "label": "Client name",
+                "maxLength": 4000,
+                "componentKey": "TextBox_uHzsUyOk",
+                "componentType": "TextBox",
+                "componentName": "clientName",
+                "required": true
+            },
+            "TextBox_hPMbO1hd": {
+                "label": "Client email",
+                "maxLength": 4000,
+                "componentKey": "TextBox_hPMbO1hd",
+                "componentType": "TextBox",
+                "componentName": "clientEmail",
+                "required": true
+            },
+            "TextBox_EiLlybEZ": {
+                "label": "Agreement name",
+                "maxLength": 4000,
+                "componentKey": "TextBox_EiLlybEZ",
+                "componentType": "TextBox",
+                "componentName": "agreementName",
+                "required": true
+            },
+            "TextBox_iJy0PD5a": {
+                "label": "Agreement ID",
+                "maxLength": 4000,
+                "componentKey": "TextBox_iJy0PD5a",
+                "componentType": "TextBox",
+                "componentName": "agreementId",
+                "required": true
+            },
+            "TextBox_tBtl2qEp": {
+                "label": "Project Name",
+                "maxLength": 4000,
+                "componentKey": "TextBox_tBtl2qEp",
+                "componentType": "TextBox",
+                "componentName": "projectName",
+                "required": true
+            },
+            "Select_ga3tnJ6C": {
+                "label": "Package Name",
+                "options": [
+                    {
+                        "label": "Starter",
+                        "optionKey": "nrV1vzEj",
+                        "value": "Starter",
+                        "selected": true
+                    },
+                    {
+                        "label": "Standard",
+                        "optionKey": "kgSK92iT",
+                        "value": "Standard"
+                    },
+                    {
+                        "label": "Premium",
+                        "optionKey": "go4m8yhB",
+                        "value": "Premium"
+                    }
+                ],
+                "required": true,
+                "componentKey": "Select_ga3tnJ6C",
+                "componentType": "Select",
+                "componentName": "packageName"
+            },
+            "Number_4nkbDQ9k": {
+                "label": "Price",
+                "predefinedValidation": "periodSeparatedNumber",
+                "componentKey": "Number_4nkbDQ9k",
+                "componentType": "Number",
+                "componentName": "price",
+                "required": false,
+                "readOnly": false
+            },
+            "TextBox_V1pF0Abg": {
+                "label": "Kickoff/Scheduling Link (Calendly)",
+                "maxLength": 4000,
+                "componentKey": "TextBox_V1pF0Abg",
+                "componentType": "TextBox",
+                "componentName": "calendlyUrl",
+                "multiLine": true,
+                "required": true
+            },
+            "TextBox_bQQd0TOa": {
+                "label": "Repo name",
+                "maxLength": 4000,
+                "componentKey": "TextBox_bQQd0TOa",
+                "componentType": "TextBox",
+                "componentName": "repoName"
+            },
+            "TextBox_1_rcHmWt": {
+                "label": "Anything else we should know?",
+                "maxLength": 4000,
+                "componentKey": "TextBox_1_rcHmWt",
+                "componentType": "TextBox",
+                "componentName": "intakeNotes",
+                "multiLine": true
+            },
+            "CheckboxGroup_iOJyuJGv": {
+                "label": "Ready to kickoff automatically?",
+                "options": [
+                    {
+                        "label": "Yes!",
+                        "optionKey": "q3KHdmjh",
+                        "value": "readytoKickoff",
+                        "description": "",
+                        "selected": true
+                    }
+                ],
+                "selectionValidation": {
+                    "groupRule": "SelectAtLeast",
+                    "minimumRequired": 0
+                },
+                "componentKey": "CheckboxGroup_iOJyuJGv",
+                "componentType": "CheckboxGroup",
+                "componentName": "readyToKickoff",
+                "readOnly": false
+            }
+        },
+        "isStandalone": true,
+        "templates": []
+    },
+    "formLocale": "en",
+    "versionId": 2,
+    "eSignTemplates": []
+}

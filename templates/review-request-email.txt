@@ -1,0 +1,13 @@
+Subject: Manual review needed: /clientName (/projectName)
+
+Headline: Manual review required before kickoff.
+
+Client: /clientName (/clientEmail)
+Project: /projectName
+Package: /packageName
+Price: /price
+
+Agreement: /agreementName /agreementId
+
+Notes:
+/intakeNotes
