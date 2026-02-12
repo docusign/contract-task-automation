@@ -10,7 +10,7 @@
 6. Prints the `instance_url`
 
 ## Prerequisites
-- [(Docusign developer account)](https://www.docusign.com/developers/sandbox?postActivateUrl=https%3A%2F%2Fdevelopers.docusign.com%2F)
+- [Docusign developer account](https://www.docusign.com/developers/sandbox?postActivateUrl=https%3A%2F%2Fdevelopers.docusign.com%2F)
 - [Node.js and npm](https://nodejs.org/en/download/)
 
 Additionally, a Maestro workflow in your account that:
