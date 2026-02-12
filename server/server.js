@@ -2,9 +2,15 @@ require("dotenv").config();
 
 const express = require("express");
 const iam = require("@docusign/iam-sdk");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 login requests per windowMs
+});
 
 const {
   DS_AUTH_SERVER = "https://account-d.docusign.com",
@@ -56,7 +62,7 @@ app.get("/", (req, res) => {
   `);
 });
 
-app.get("/login", (req, res) => {
+app.get("/login", loginLimiter, (req, res) => {
   res.redirect(buildAuthUrl());
 });
 
